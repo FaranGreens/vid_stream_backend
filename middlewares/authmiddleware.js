@@ -9,7 +9,7 @@ async function authMiddleware(req, res, next) {
       // const token = authHeader.split(" ").pop();
       const token = authHeader.split(" ")[1];
       if (token) {
-        console.log("token is ", token);
+        // console.log("token is ", token);
         const payload = verifyToken(token);
         const user = await getUserById(payload._id);
 
